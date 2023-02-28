@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check chỉ số MBI </title>
+</head>
+<body>
+<label><input type="number" id="chieucao" placeholder="Nhap vao chieu cao" size="30px"></label><br>
+<br>
+<label><input type="number" id="cannang" placeholder="Nhap vao can nang" size="30px"></label>
+<br><br>
+<label><input type="button" id="check" value="check"></label>
+<p id="show"></p>
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkMbi);
+
+    function checkMbi() {
+        let h = +document.getElementById('chieucao').value;
+        let w = +document.getElementById('cannang').value;
+        let mbi = w / (h * h);
+        if (mbi < 18.5) {
+            document.getElementById('show').innerHTML = 'underWeight';
+        } else if (mbi < 25) {
+            document.getElementById('show').innerHTML = 'Nomal';
+        } else if (mbi < 30) {
+            document.getElementById('show').innerHTML = 'overWeight';
+        } else {
+            document.getElementById('show').innerHTML = 'Obese';
+        }
+    }
+
+</script>
+</body>
+</html>
