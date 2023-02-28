@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>keyboardEvent</title>
+</head>
+<body onload="docReady()">
+<img src="https://i.ex-cdn.com/mgn.vn/files/content/2022/09/03/one-punch-man-2046.jpg" id="xeko" alt="onxeko" style="width:200px">
+<script>
+    let  img= document.getElementById("xeko");
+    img.style.position='relative';
+    img.style.left='190px';
+    img.style.top='10px';
+    function upArrow(){
+    img.style.top= parseInt(img.style.top) -5 + 'px'}
+    function downArrow(){
+        img.style.top= parseInt(img.style.top) + 5 + 'px'}
+    function leftArrow(){
+        img.style.left= parseInt(img.style.left) -5 + 'px'}
+    function rightArrow(){
+
+        img.style.left= parseInt(img.style.left) + 5 + 'px'}
+
+    function moveImage(evt){
+        switch(evt.keyCode) {
+            case 37:
+                leftArrow();
+                break;
+            case 39:
+                rightArrow();
+                break;
+            case 38:
+                upArrow();
+                break;
+            case 40:
+                downArrow();
+                break;
+        }
+        }
+        function docReady(){
+            window.addEventListener('keydown', moveImage);
+        }
+</script>
+</body>
+</html>
