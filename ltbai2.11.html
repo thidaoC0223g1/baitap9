@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh thue thu nhap ca nhan </title>
+</head>
+<body>
+<p><b>tinh thue thu nhap ca nhan</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao tong thu nhap"></label><br>
+<label><input type="button" id="check" value="tinh tien"></label>
+<script>
+    let cal = document.getElementById('check');
+    cal.addEventListener('click', calEqual);
+
+    function calEqual() {
+        let a = parseInt(document.getElementById('numberA').value);
+        if (a <= 11e+6) {
+            alert('khong mat thue')
+        } else {
+            alert(' thue thu nhap ca nhan ' + a * 0.13 + 'vnd')
+        }}
+</script>
+</body>
+</html>
