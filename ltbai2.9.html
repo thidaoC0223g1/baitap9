@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra tam giac </title>
+</head>
+<body>
+<p><b>kiem tra tam giac</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao so a"></label><br>
+<label><input type="text" id="numberB" placeholder="nhap vao so B"></label><br>
+<label><input type="text" id="numberC" placeholder="nhap vao so C "></label><br>
+<label><input type="button" id="check" value="check"></label>
+<script>
+    let cal = document.getElementById('check');
+    cal.addEventListener('click', calEqual);
+
+    function calEqual() {
+        let a = parseInt(document.getElementById('numberA').value);
+        let b = parseInt(document.getElementById('numberB').value);
+        let c = parseInt(document.getElementById('numberC').value);
+        if (a > 0 && b > 0 && c > 0) {
+            if ((a + b) > c && (b + c) > a && (a + c) > b) {
+                alert('a, b, c la ba canh cua tam giac')
+            } else {
+                alert('a, b, c khong phai ba canh cua tam giac')
+            }
+        }
+    }
+
+</script>
+</body>
+</html>
