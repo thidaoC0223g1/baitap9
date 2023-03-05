@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>doi do C sang do F </title>
+</head>
+<body>
+<label><input type="text" id="input" placeholder="nhap vao do C"></label>
+<label><input type="button" id="check" value="convert"></label>
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkTemp);
+
+    function checkTemp() {
+        let f ;
+        let c = +document.getElementById('input').value;
+        f = c * 9 / 5 + 32;
+        document.write("F temputure = " + f);
+    }
+</script>
+</body>
+</html>
