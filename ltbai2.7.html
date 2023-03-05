@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>giai phuong trinh bac 2 </title>
+</head>
+<body>
+<p><b>Giai phuong trinh bac 2</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao so a"></label><br>
+<label><input type="text" id="numberB" placeholder="nhap vao so B"></label><br>
+<label><input type="text" id="numberC" placeholder="nhap vao so C "></label><br>
+<label><input type="button" id="check" value="check"></label>
+<script>
+    let cal = document.getElementById('check');
+    cal.addEventListener('click', calEqual);
+
+    function calEqual() {
+        let a = parseInt(document.getElementById('numberA').value);
+        let b = parseInt(document.getElementById('numberB').value);
+        let c = parseInt(document.getElementById('numberC').value);
+
+        if (a === 0) {
+            if (b === 0 && c === 0) {
+                alert('phuong trinh co vo so nghiem')
+            } else if (b === 0 && c !== 0) {
+                alert('phuong trinh vo nghiem')
+            } else if (b !== 0) {
+                alert('phuong trinh co nghiem x=' + -c / b)
+            }
+        } else {
+            let x1 = 0
+            let x2 = 0;
+            let delta = b * b - 4 * a * c;
+            if (delta < 0) {
+                alert('phuong trinh vo nghiem')
+            } else if (delta === 0) {
+                alert('phuong trinh co nghiem kep =' + -b / (2 * a))
+            } else if (delta > 0) {
+                x1 = (-b + Math.sqrt(delta)) / (2 * a);
+                x2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.write('phuong trinh co nghiem x1=' + x1  + 'x2='+x2)
+            }
+
+        }
+    }
+</script>
+</body>
+</html>
