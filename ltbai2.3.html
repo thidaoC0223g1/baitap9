@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dien tich hinh vuong </title>
+</head>
+<body>
+<label><input type="text" id="input" placeholder="nhap vao chieu dai canh"></label>
+<label><input type="button" id="check" value="convert"></label>
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkFeet);
+
+    function checkFeet() {
+        let s ;
+        let m = +document.getElementById('input').value;
+        s = m*m;
+        document.write('dien tich hinh vuong =' +s );
+    }
+</script>
+</body>
+</html>
