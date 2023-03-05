@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh lai ngan hang </title>
+</head>
+<body>
+<p><b>tinh lai ngan hang</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao so tien vay"></label><br>
+<label><input type="text" id="numberB" placeholder="nhap vao so thang vay"></label><br>
+<label><input type="text" id="numberC" placeholder="nhap vao lai suat"></label><br>
+<label><input type="button" id="check" value="tinh tien"></label>
+<script>
+    let cal = document.getElementById('check');
+    cal.addEventListener('click', calEqual);
+
+    function calEqual() {
+        let a = parseInt(document.getElementById('numberA').value);
+        let b = parseInt(document.getElementById('numberB').value);
+        let i = parseFloat(document.getElementById('numberC').value);
+        let sum=0;
+         for (let n=1;n<=b;n++){
+             sum+=Math.pow(i,n)
+
+         }document.write('tien lai ngan hang = ' +a*sum +'&nbsp'+'vnd');
+    }
+
+
+</script>
+</body>
+</html>
