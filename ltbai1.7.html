@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen tap cau truc dieu kien 1 bai7</title>
+</head>
+<body>
+<p><b>Cuoc dien thoai trong thang</b></p><br>
+<label><input type="text" id="nhapvao" placeholder="nhap vao so phut goi"></label>
+<label><input type="button" id="check" value="check"></label>
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkcost);
+
+    function checkcost() {
+        let cost = 0;
+        let time = +document.getElementById('nhapvao').value;
+        if (time < 1000) {
+            if (time < 500) {
+                if (time < 100) {
+                    cost = time * 2500;
+                    document.write(' cuoc dien thoai = ' + cost + '&nbsp' +'vnd');
+                } else {
+                    cost = time * 2000;
+                    document.write(' cuoc dien thoai =' + cost +'&nbsp' + 'vnd');
+                }
+            } else {
+                cost = time * 1000;
+                document.write(' cuoc dien thoai = ' + cost +'&nbsp' + 'vnd');
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
