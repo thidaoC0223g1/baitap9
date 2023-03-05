@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tinh gia dien </title>
+</head>
+<body>
+<p><b>tinh gia dien</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao so dien"></label><br>
+
+<label><input type="button" id="check" value="tinh tien"></label>
+<script>
+    let cal = document.getElementById('check');
+    cal.addEventListener('click', calEqual);
+
+    function calEqual() {
+        let a = parseInt(document.getElementById('numberA').value);
+        if (a <= 50) {
+            alert('tien dien =' + a * 1500 + 'vnd')
+        } else if (a > 50 && a <= 100) {
+            alert(' tien dien = ' + a * 2000 + 'vnd')
+        }else if (a>100 && a<=150){
+            alert(' tien dien = ' + a * 2500 + 'vnd')
+        }else {
+            alert(' tien dien = ' + a * 3000 + 'vnd')
+        }
+    }
+
+
+</script>
+</body>
+</html>
