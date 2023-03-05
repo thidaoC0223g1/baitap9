@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>luyen tap cau truc dieu kien 1 bai6</title>
+</head>
+<body>
+<p><b>% HOA HONG</b></p><br>
+<label><input type="text" id="nhapvao" placeholder="nhap vao doanh so"></label>
+<label><input type="button" id="check" value="check"></label>
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkhh);
+
+    function checkhh() {
+        let hh = 0;
+        let ds = +document.getElementById('nhapvao').value;
+        if (ds < 1000) {
+            if (ds < 500) {
+                if (ds < 100) {
+                    hh = ds * 0.05;
+                    document.write(' hoa hong cua ban la ' + hh);
+                } else {
+                    hh = ds * 0.1;
+                    document.write(' hoa hong cua ban la ' + hh);
+                }
+            } else {
+                hh = ds * 0.15;
+                document.write(' hoa hong cua ban la ' + hh);
+            }
+        }
+
+    }
+
+</script>
+</body>
+</html>
