@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiem tra tuoi mot nguoi </title>
+</head>
+<body>
+<p><b>kiem tra tuoi mot nguoi</b></p>
+<label><input type="text" id="numberA" placeholder="nhap vao so tuoi"></label><br>
+<label><input type="button" id="check" value="check"></label><br>
+
+<script>
+    let kt = document.getElementById('check');
+    kt.addEventListener('click', checkYear);
+
+    function checkYear() {
+        let a = parseInt(document.getElementById('numberA').value);
+        if (a > 0 && a < 120) {
+            alert('right');
+        } else {
+            alert('khong phai so tuoi cua mot nguoi')
+        }
+    }
+</script>
+</body>
+</html>
